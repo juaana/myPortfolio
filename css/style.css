@@ -1,0 +1,244 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Encabezado */
+.header, .contact-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Fondo del cuerpo */
+.b-about-me, .b-index, .b-my-work {
+  background-image: url(../img/Background.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.b-contact {
+  background-color: white;
+}
+
+/* Barra de navegación */
+.navbar, .contact-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar ul, .contact-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-navbar a {
+  text-decoration: none;
+  color: #617C91;
+}
+
+/* Contenido */
+.contenido, .contact-contenido {
+  width: auto;
+  height: auto;
+}
+
+.contenido h1 {
+  display: flex;
+  width: auto;
+  max-width: 683px;
+  height: 255px;
+  flex-direction: column;
+  justify-content: right;
+  margin: 212px 100px 0;
+  color: #FFF;
+  text-align: right;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.contact-contenido h1 {
+  display: center;
+  width: auto;
+  max-width: 683px;
+  height: auto;
+  margin: auto;
+  color: #617C91;
+  text-align: center;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contenido .AM {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 217px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* Acerca de mí */
+.about-me, .about-me-text {
+  color: #FFF;
+  text-align: right;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about-me {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.about-me-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Mi trabajo */
+.my-work {
+  width: auto;
+  height: 672px;
+  display: flex;
+  align-items: center;
+  margin-top: 213px;
+  margin-bottom: 73px;
+}
+
+.my-work section {
+  width: 401px;
+  height: 532px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 29px;
+  margin-bottom: 111px;
+}
+
+.my-work .card-uno,
+.my-work .card-dos,
+.my-work .card-tres {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Formulario de contacto */
+form {
+  width: 1085px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  display: flex;
+  width: 1085px;
+  padding: 37px 845px 37px 60px;
+  align-items: center;
+  margin-bottom: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(97, 124, 145, 0.13);
+}
+
+form textarea {
+  height: auto;
+  resize: vertical;
+}
+
+form button {
+  display: inline-block;
+  background-color: #EEC3B9;
+  color: white;
+  padding: 27px 0px 28px 0px;
+  width: 450px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: auto;
+  align-items: center;
+}
+
+form button:hover {
+  background-color: #eca493;
+}
+
+/* Pie de página */
+.footer {
+  position: static;
+  background-color: #617C91;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Redes sociales */
+.social {
+  background-color: #617C91;
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.social ul {
+  list-style: none;
+  gap: 20px;
+}
+
+.social a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Derechos de autor */
+.copyright {
+  width: 194px;
+  height: 71px;
+  top: 115px;
+  left: 65px;
+  background-color: #617C91;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  text-align: left;
+  line-height: 1.4;
+}
