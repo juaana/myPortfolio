@@ -5,39 +5,60 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap');
+
+.contact-page{
+  display: grid;
+    grid-template-rows: 14% 23% 52% 19%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar"
+      "titulo"
+      "card"
+      "footer";
+}
+
+.index{
+  display: grid;
+  grid-template-rows: 5% 45% 45% 5%;
+  grid-template-columns: 1fr;
+  grid-template-areas: "navbar"
+                        "titulo"
+                       "card"
+                       "footer" ;
+}
 /* Encabezado */
-.header, .contact-header {
-  padding: 10px;
+.header {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  grid-area: navbar;
+  background-color: #617C91;
+  font-size: 1em;
+ }
+.logo{
+  padding-left: 1.5em;
 }
+ .logo img{
+  height: 4em;
+ }
 
-/* Fondo del cuerpo */
-.b-about-me, .b-index, .b-my-work {
-  background-image: url(../img/Background.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-.b-contact {
-  background-color: white;
-}
-
+ .menu-abrir{
+  display: none;
+ }
+ .menu-cerrar{
+  display: none;
+ }
 /* Barra de navegación */
-.navbar, .contact-navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px 20px;
+.navbar {
+  
+  padding: 1em 5em;
 }
 
-.navbar ul, .contact-navbar ul {
+.navbar ul{
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 2em;
 }
 
 .navbar a {
@@ -45,102 +66,108 @@
   color: white;
 }
 
-.contact-navbar a {
-  text-decoration: none;
-  color: #617C91;
-}
 
 /* Contenido */
-.contenido, .contact-contenido {
-  width: auto;
-  height: auto;
+.contenido{
+  grid-area: titulo;
+  background-image: url(../img/Background.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.contenido h1 {
+.contact-contenido{
+  grid-area: titulo;
+  background-color: #617C91;
+}
+.contact-contenido h1{
+    font-family: 'Abril Fatface', regular;
+      display: flex;
+      width: auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin:1em;
+      color: #FFF;
+      text-align: left;
+      font-size: 4em;
+      font-weight: 600;
+      line-height: normal;
+
+}
+
+.contenido h1{
+  font-family: 'Abril Fatface', regular;
   display: flex;
   width: auto;
-  max-width: 683px;
-  height: 255px;
   flex-direction: column;
-  justify-content: right;
-  margin: 212px 100px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 4em 0em 0em 0.8em;
   color: #FFF;
-  text-align: right;
-  font-size: 128px;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.contact-contenido h1 {
-  display: center;
-  width: auto;
-  max-width: 683px;
-  height: auto;
-  margin: auto;
-  color: #617C91;
-  text-align: center;
-  font-size: 96px;
+  text-align: left;
+  font-size: 4em;
   font-weight: 600;
   line-height: normal;
 }
 
+
+
 .contenido .AM {
   display: flex;
-  width: 20%;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 217px;
-  margin-left: auto;
-  margin-right: 20px;
+  gap: 0.5em;
+  margin-top: 13em;
+  margin-left: 3em;
+  margin-right: 2em;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom:  10em;
 }
 
 /* Acerca de mí */
-.about-me, .about-me-text {
+.about-me {
   color: #FFF;
   text-align: right;
-  font-size: 20px;
-  font-style: normal;
+  align-self: start;
   font-weight: 400;
-  line-height: normal;
-}
-
-.about-me {
-  font-size: 40px;
-  font-weight: 400;
+  display: flex;
 }
 
 .about-me-text {
-  font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 20px;
+    margin-bottom: 2em;
+    color: white;
+    font-size: 0.6em;
 }
+.contact-form{
+  grid-area: card;
 
+}
 /* Mi trabajo */
-.my-work {
-  width: auto;
-  height: 672px;
-  display: flex;
-  align-items: center;
-  margin-top: 213px;
-  margin-bottom: 73px;
+.my-work{
+    grid-area: card;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -4em;
+      margin-bottom: 2em;
 }
 
 .my-work section {
-  width: 401px;
-  height: 532px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: #FFF;
-  box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.25);
-  margin-top: 29px;
-  margin-bottom: 111px;
+      width: 20em;
+        height: 20em;
+        border-radius: 1em;
+        background: #FFF;
+        box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.25);
+        margin-top: 2em;
 }
 
-.my-work .card-uno,
-.my-work .card-dos,
-.my-work .card-tres {
-  margin-left: auto;
-  margin-right: auto;
+.card-uno{
+  margin-top: 16em;
+}
+card-tres{
+margin-bottom: 2em;
 }
 
 /* Formulario de contacto */
@@ -197,31 +224,23 @@ form button:hover {
 
 /* Pie de página */
 .footer {
-  position: static;
+  grid-area: footer;
   background-color: #617C91;
   color: white;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 /* Redes sociales */
 .social {
-  background-color: #617C91;
-  color: white;
-  font-size: 14px;
-  line-height: 1.4;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px 20px;
+ margin: 1em 0em 1em 1em;
+    font-size: 1em;
 }
 
 .social ul {
   list-style: none;
-  gap: 20px;
+  gap: 1em;
 }
 
 .social a {
@@ -231,14 +250,108 @@ form button:hover {
 
 /* Derechos de autor */
 .copyright {
-  width: 194px;
-  height: 71px;
-  top: 115px;
-  left: 65px;
-  background-color: #617C91;
-  color: white;
-  font-size: 14px;
-  padding: 10px;
-  text-align: left;
-  line-height: 1.4;
+  margin: 1em 0em 1em 1em;
+    font-size: 1em;
 }
+
+@media screen  and (min-width: 240px) and (max-width: 480px) {
+  .menu-abrir{
+    display: flex;
+    margin-right: 2em;
+    background-color: transparent;
+      border: transparent;
+      fill: white;
+      width: 3em;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+    gap: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #617C91;
+    padding: 7em 5em 1em 5em;
+
+    bottom: 0;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+    display: none;
+}
+  .navbar ul{ 
+    flex-direction: column;
+    align-items: end;
+
+  }
+.menu-cerrar{
+  display: block;
+  background-color: transparent;
+  border: transparent;
+  fill: white;
+  width: 2em;
+  align-self: flex-start;
+  left: 0;
+  position: absolute;
+  top: 1em;
+}
+
+.menu-cerrar svg{
+  height: 1.5em;
+}
+  .navbar-visible{
+    display: flex;
+    transition: left 0.3s ease;
+  }
+}
+
+
+@media screen and (min-width: 481px)  {
+.index{
+  grid-template-rows: 9% 80% 37% 10%;
+}
+.navbar{
+  font-size: 2em;
+}
+.AM p{
+    margin-left: 2em;
+    font-size: 3em;
+}
+
+.logo{
+  margin-left: 2em;
+}
+.logo img{
+  height: 6em;
+  margin-left: 1em;
+}
+
+.my-work{
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+.my-work section{
+      width: 15em;
+        height: 15em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+}
+.contenido h1{
+  font-size: 10em;
+}
+ .footer {
+  font-size: 2em;
+}
+.footer img{
+  height: 1em;
+}
+}
+
+@media screen and (min-width: 836px){
+  .my-work section{
+    width: 40em;
+    height: 40em;
+  }
+} 

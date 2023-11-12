@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juana Zabaleta</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="./scripts/main.js"></script>
   </head>
-  <body class="b-contact">
-    <!-- HEADER -->
-    <header class="contact-header">
-      <div class="logo">
-        <img src="./img/index/Logo.png" alt="Logo de mi página" />
+  <body>
+    <div class="contact-page">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="logo">
+          <img src="../img/index/Logo.png" alt="Logo de mi página" />
+        </div>
+        <button class="menu-abrir"></button>
+        <nav class="navbar">
+          <ul>
+            <button class="menu-cerrar"></button>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./pages/my-work.html">My work</a></li>
+            <li><a href="./pages/about-me.html">About me</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="contact-navbar">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./my-work.html">My work</a></li>
-          <li><a href="./about-me.html">About me</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="contact-contenido">
-      <h1>Let's talk</h1>
+      <div class="contact-contenido">
+        <h1>Let's talk</h1>
+      </div>
 
+      <!-- CONTENT -->
       <div class="contact-form">
-        <form netlify>
+        <form netlify action="/your-netlify-form-endpoint">
           <input
             placeholder="Full name"
             name="full-name"
@@ -52,33 +58,36 @@
             class="message"
             required
           ></textarea>
-
           <button type="submit">Enviar</button>
         </form>
       </div>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="copyright">
-        <p>&copy; 2023 Juana Zabaleta.</p>
-        <p>Todos los derechos reservados.</p>
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="copyright">
+          <p>&copy; 2023 Juana Zabaleta.</p>
+          <p>Todos los derechos reservados.</p>
+        </div>
+        <div class="social">
+          <h2>Social</h2>
+          <ul>
+            <li>
+              <img src="../img/footer/Behance Icon.png" alt="Ícono behance" />
+              <a href="https://www.behance.net/juanazabaleta" target="_blank"
+                >Behance</a
+              >
+            </li>
+            <li>
+              <img src="../img/footer/Linkedin Icon.png" alt="Ícono linkedin" />
+              <a
+                href="https://www.linkedin.com/in/juanazabaleta/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="social">
-        <h2>Social</h2>
-        <ul>
-          <li>
-            <a href="https://www.behance.net/juanazabaleta" target="_blank"
-              >Behance</a
-            >
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/juanazabaleta/" target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
-      </div>
-    </footer>
+    </div>
   </body>
 </html>
